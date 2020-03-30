@@ -1,5 +1,5 @@
 import os
-Import csv
+import csv
 #Directions..
 #The total number of votes cast
 #A complete list of candidates who received votes
@@ -16,29 +16,35 @@ Import csv
 #O'Tooley: 3.000% (105630)
 #-------------------------
 #Winner: Khan
-election_data = os.path.join('.','election_data')
+election_data = os.path.join('election_data')
 #the file online downloaded as a tab, so idk if it will come out right
 
 #define my variables
 total_votes= 0
-candidates=[]
+candidates=["Khan", "Correy", "Li", "O'Tooley"]
+Khan_v=0
+Correy_v=0
+Li= 0
+tooley_v=0
 
-
-with open(election_data, 'r') as csvfile:
+#open the file
+with open(election_data,'r') as csvfile:
     csvreader = csv.reader(csvfile, delimiter=",")
     csv_header = next(csvreader)
-
-    for row csvfile:
+#loop through data to get the if then statement for each candidate votes
+    for row in csvfile:
         total_votes +=1
         
-
-
-
-
-
-# Declare my variables
-total_votes=[]
-
-
-print
-
+        if row[2] == "Khan": 
+            Khan_v +=1
+        elif row[2] == "Correy":
+            Correy_v +=1
+        elif row[2] == "Li": 
+            Li_v +=1
+        else row[2] == "O'Tooley":
+            tooley_v +=1
+# get percentage of votes
+Khan_percent=((Khan_v/total_votes) *100)
+Correy_percent=((Correy_v/total_votes)*100)
+Li_percent=((Li_v/total_votes)*100)
+Otooley_v=((tooley_v/total_votes)*100)
