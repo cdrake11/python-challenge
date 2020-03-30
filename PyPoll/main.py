@@ -17,6 +17,21 @@ Import csv
 #-------------------------
 #Winner: Khan
 election_data = os.path.join('.','election_data')
+#the file online downloaded as a tab, so idk if it will come out right
+
+#define my variables
+total_votes= 0
+candidates=[]
+
+
+with open(election_data, 'r') as csvfile:
+    csvreader = csv.reader(csvfile, delimiter=",")
+    csv_header = next(csvreader)
+
+    for row csvfile:
+        total_votes +=1
+        
+
 
 
 
