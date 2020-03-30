@@ -22,6 +22,7 @@ election_data = os.path.join('election_data')
 #define my variables
 total_votes= 0
 candidates=["Khan", "Correy", "Li", "O'Tooley"]
+candidates_v=["Khan_v", "Correy_v", "Li_v", "tooley_v"]
 Khan_v=0
 Correy_v=0
 Li= 0
@@ -48,3 +49,5 @@ Khan_percent=((Khan_v/total_votes) *100)
 Correy_percent=((Correy_v/total_votes)*100)
 Li_percent=((Li_v/total_votes)*100)
 Otooley_v=((tooley_v/total_votes)*100)
+#get the winner
+winner=(max(candidates_v))
