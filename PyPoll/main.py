@@ -42,7 +42,7 @@ with open(election_data,'r') as csvfile:
             Correy_v +=1
         elif row[2] == "Li": 
             Li_v +=1
-        else row[2] == "O'Tooley":
+        elif row[2] == "O'Tooley":
             tooley_v +=1
 # get percentage of votes
 Khan_percent=((Khan_v/total_votes) *100)
@@ -51,10 +51,10 @@ Li_percent=((Li_v/total_votes)*100)
 tooley_percent=((tooley_v/total_votes)*100)
 #get the winner
 winner=(max(candidates_v))
- print("Election Results")
-    print(f"Total Votes: {total_votes}")
-    print(f"Khan %{(Khan_percent)} ({Khan_v)})")
-    print(f"Correy %{str(Correy_percent)} ({(Correy_v)})")
-    print(f"Li %{str(Li_percent)} ({(Li_v)})")
-    print(f"O'Tooley %{(tooley_percent)} ({(tooley_v)})")
-    print(f"Winner: {(winner)}")
+print("Election Results")
+print(f"Total Votes: {total_votes}")
+print(f"Khan %({str(Khan_percent)}) ({(Khan_v)})")
+print(f"Correy %{str(Correy_percent)} ({(Correy_v)})")
+print(f"Li %{str(Li_percent)} ({(Li_v)})")
+print(f"O'Tooley %{(tooley_percent)} ({(tooley_v)})")
+print(f"Winner: {(winner)}")
